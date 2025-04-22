@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- Drawing Canvas -->
+    <com.example.whiteboardassignment.DrawingView
+        android:id="@+id/drawingView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFFFFF" />
+
+    <!-- Toolbar -->
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="#EEEEEE">
+
+        <!-- Color Selection -->
+        <LinearLayout
+            android:id="@+id/colorPalette"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/btnColorBlack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="#000000" />
+
+            <Button
+                android:id="@+id/btnColorRed"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="#FF0000"
+                android:layout_marginStart="8dp" />
+
+            <Button
+                android:id="@+id/btnColorGreen"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="#00FF00"
+                android:layout_marginStart="8dp" />
+
+            <Button
+                android:id="@+id/btnColorBlue"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="#0000FF"
+                android:layout_marginStart="8dp" />
+
+            <Button
+                android:id="@+id/btnColorYellow"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="#FFFF00"
+                android:layout_marginStart="8dp" />
+
+            <Button
+                android:id="@+id/btnColorCyan"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="#00FFFF"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Stroke Width -->
+        <TextView
+            android:id="@+id/strokeWidthLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stroke Width"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <SeekBar
+            android:id="@+id/strokeSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="50"
+            android:progress="5" />
+
+        <!-- Mode Buttons -->
+        <LinearLayout
+            android:id="@+id/modeButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/btnDraw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Draw" />
+
+            <Button
+                android:id="@+id/btnErase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Erase"
+                android:layout_marginStart="8dp" />
+
+            <Button
+                android:id="@+id/btnRectangle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rectangle"
+                android:layout_marginStart="8dp" />
+
+            <Button
+                android:id="@+id/btnCircle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Circle"
+                android:layout_marginStart="8dp" />
+
+            <Button
+                android:id="@+id/btnLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Line"
+                android:layout_marginStart="8dp" />
+
+            <Button
+                android:id="@+id/btnPolygon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Polygon"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:id="@+id/actionButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save" />
+
+            <Button
+                android:id="@+id/btnLoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Load"
+                android:layout_marginStart="8dp" />
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clear"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
